@@ -30,6 +30,8 @@ public class JPushEventReceiver extends JPushMessageReceiver {
     mShowCallBack = c;
   }
 
+  ///
+
   @Override
   public void onCommandResult(Context context, CmdMessage cmdMessage) {
     //注册失败+三方厂商注册回调
@@ -68,6 +70,7 @@ public class JPushEventReceiver extends JPushMessageReceiver {
       mShowCallBack.onShown(token);
       setShowCallBack(mShowCallBack);
       ///
+
       Log.e(TAG, "获取到 " + deviceName + " 的token:" + token);
     }
   }
