@@ -278,6 +278,17 @@ class JPush {
   }
 
   ///
+  /// 获取 厂商token。
+  ///
+  /// @param {Function} callback = (String) => {}
+  ///
+  Future<String> getScTokens() async {
+    print(flutter_log + "getScTokens:");
+    final String token = await _channel.invokeMethod('getSCToken');
+    return token;
+  }
+
+  ///
   /// 发送本地通知到调度器，指定时间出发该通知。
   /// @param {Notification} notification
   ///
