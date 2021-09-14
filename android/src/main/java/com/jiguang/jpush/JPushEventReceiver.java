@@ -34,6 +34,7 @@ public class JPushEventReceiver extends JPushMessageReceiver {
 
   @Override
   public void onCommandResult(Context context, JPushMessage cmdMessage) {
+    
     //注册失败+三方厂商注册回调
     //  Log.e(TAG,"[onCommandResult] "+cmdMessage);
     //cmd为10000时说明为厂商token回调
